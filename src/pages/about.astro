@@ -1,5 +1,12 @@
 ---
 const pageTitle="About Me"
+const identity= {
+    firstName: "Raúl",
+    lastName: "Rosales",
+    country: "Chile",
+    occupation: "Profesor de Artes Visuales",
+    hobbies: ["Fotografía", "Cine", "Música"],
+};
 ---
 
 <!DOCTYPE html>
@@ -16,7 +23,15 @@ const pageTitle="About Me"
     
     
         <h1>{pageTitle}</h1>
-        <h2>Soy profesor de Artes Visuales</h2> 
+        <h2>Soy {identity.firstName} {identity.lastName}</h2> 
+        <ul>
+            <li>País: {identity.country}</li>
+            <li>Ocupación: {identity.occupation}</li>
+            <li>Hobbies:
+                <ul>
+                    {identity.hobbies.map(hobby => <li>{hobby}</li>)}
+                </ul>
+            </li>
 </body>
 </html>
 
