@@ -7,10 +7,11 @@ const identity= {
     occupation: "Profesor de Artes Visuales",
     hobbies: ["Fotografía", "Cine", "Música"],
 };
+const skills = ["Audiovisual", "Diseño", "Gestión de Proyectos", "Educación", "Arte Digital"];
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +33,11 @@ const identity= {
                     {identity.hobbies.map(hobby => <li>{hobby}</li>)}
                 </ul>
             </li>
+
+        <p>Mis habilidades son:</p>
+        <ul>
+            {skills.map((skills)=> <li>{skills}</li>)}
+        </ul>
 </body>
 </html>
 
